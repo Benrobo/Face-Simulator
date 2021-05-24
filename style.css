@@ -1,0 +1,122 @@
+body{
+
+  background-size: cover;
+  background-repeat:no-repeat;
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.face{
+  width:400px;
+  height:500px;
+  background-image:linear-gradient(to bottom left, #e2b07a,  #c68642);
+  /* border-radius: 30px; */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  border-radius:50% 50% 80% 80%;
+}
+
+.eye-cont{
+  width: 300px;
+  height:100px;
+  border-top:15px solid #000;
+  border-bottom:3px solid #000;
+  border-radius: 90%;
+  /* border-radius: 300px; */
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  overflow: hidden;
+  background-image:linear-gradient(#ccc, #ffff);
+  
+}
+.eye-cont::before{
+  content: "";
+  position:absolute;
+  left:-40px;
+  top:10px;
+  background-image: linear-gradient(pink, hotpink);
+  border-radius: 40px;
+  width:50px;
+  height:100px;
+}
+.eye-cont::after{
+  content: "";
+  position:absolute;
+  right:-40px;
+  top:10px;
+  background-image: linear-gradient(pink, hotpink);
+  border-radius: 40px;
+  width:50px;
+  height:100px;
+  transition: .2s ease-in-out;
+
+}
+
+.pupil{
+  padding:0px;
+  background: #f1efef;
+  border: 5px solid #000;
+  width:80px;
+  height:80px;
+  overflow: hidden;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  position: relative;
+}
+
+.lens{
+  width:100%;
+  height:100%;
+  position: absolute;
+  left:0px;
+  top:0px;
+  background:linear-gradient( rgba(238, 155, 99, 0.432),  rgba(146, 91, 19, 0.89));
+  box-shadow: 10px 10px 3px #ccc;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  position: relative;
+}
+.dark-spot{
+  width: 40px;
+  height:40px;
+  background:#000;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.dark-spot::before{
+  content:"";
+  width:6px;
+  height:6px;
+  background:#dfdcdc;
+  position: absolute;
+  border-radius: 50%;
+  left:5px;
+  top:10px;
+}
+
+.controls{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  flex-wrap: wrap;
+  width:500px;
+  height: auto;
+
+}
+
